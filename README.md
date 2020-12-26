@@ -2,6 +2,8 @@
 > Fake ViaVersion API
 
 [![License](https://img.shields.io/github/license/LemonCaramel/caramelProtocolVersionAPI)](https://github.com/LemonCaramel/caramelProtocolVersionAPI/blob/master/LICENSE)
+[![Latest Release](https://img.shields.io/github/v/release/LemonCaramel/caramelProtocolVersionAPI)](https://caramel.moe/)
+[![GitHub issues](https://img.shields.io/github/issues/LemonCaramel/caramelProtocolVersionAPI)](https://github.com/LemonCaramel/caramelProtocolVersionAPI/issues)
 [![Build Status](https://travis-ci.com/LemonCaramel/caramelProtocolVersionAPI.svg?branch=master)](https://travis-ci.com/LemonCaramel/caramelProtocolVersionAPI)
 [![Discord](https://img.shields.io/badge/use%20server-%20discord-blue.svg)](https://discord.gg/f9qGtYF)
 
