@@ -6,7 +6,7 @@
 
     <groupId>moe.caramel</groupId>
     <artifactId>protocolversionapi</artifactId>
-    <version>STABLE-1.0.0</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>caramelProtocolVersionAPI</name>
@@ -40,6 +40,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <finalName>${project.name}-${project.version}</finalName>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                         </configuration>
                     </execution>
@@ -80,6 +81,7 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-buffer</artifactId>
             <version>4.1.53.Final</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
