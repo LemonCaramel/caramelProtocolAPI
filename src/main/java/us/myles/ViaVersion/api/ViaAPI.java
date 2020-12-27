@@ -12,11 +12,11 @@ public interface ViaAPI<T> {
     int getPlayerVersion(UUID uuid);
 
     @Deprecated
-    default boolean isPorted(UUID playerUUID) {
-        return isInjected(playerUUID);
+    default boolean isPorted(UUID uuid) {
+        return isInjected(uuid);
     }
 
-    boolean isInjected(UUID playerUUID);
+    boolean isInjected(UUID uuid);
 
     String getVersion();
 
