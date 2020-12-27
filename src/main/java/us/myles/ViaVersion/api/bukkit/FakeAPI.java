@@ -44,13 +44,13 @@ public class FakeAPI implements ViaAPI<Player> {
 
     @Override
     public void sendRawPacket(Player player, ByteBuf packet) {
-        // TODO We don't need it now.
+        // We don't need it now.
         plugin.getLogger().warning("Ignore: sendRawPacket <Player>");
     }
 
     @Override
     public void sendRawPacket(UUID uuid, ByteBuf packet) {
-        // TODO We don't need it now.
+        // We don't need it now.
         plugin.getLogger().warning("Ignore: sendRawPacket <UUID>");
     }
 
