@@ -17,7 +17,7 @@ public class FakeAPI implements ViaAPI<Player> {
 
     public FakeAPI(Main plugin) {
         this.plugin = plugin;
-        this.version = ProtocolNumber.getNumber(plugin.getServer().getBukkitVersion().split("-")[0]);
+        this.version = ProtocolNumber.getNumber(plugin, plugin.getServer().getBukkitVersion().split("-")[0]);
     }
 
     @Override

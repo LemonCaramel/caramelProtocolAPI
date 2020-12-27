@@ -1,5 +1,7 @@
 package moe.caramel.protocolversionapi.constant;
 
+import org.bukkit.plugin.Plugin;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -40,9 +42,11 @@ public enum ProtocolNumber {
         return this.version;
     }
 
-    public static int getNumber(String version) {
+    public static int getNumber(Plugin plugin, String version) {
         for (ProtocolNumber value : ProtocolNumber.values())
             if (value.getVersion().equals(version)) return value.number;
+        // Generally, this situation does not occur.
+        plugin.getLogger().warning("You are using an unsupported server version. [" + version + "]");
         return ProtocolNumber.UNKNOWN.number;
     }
 
