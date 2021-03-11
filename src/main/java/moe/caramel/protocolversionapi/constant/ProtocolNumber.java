@@ -27,6 +27,7 @@ public enum ProtocolNumber {
     MINECRAFT_1_16_2("1.16.2", 751),
     MINECRAFT_1_16_3("1.16.3", 753),
     MINECRAFT_1_16_4("1.16.4", 754),
+    MINECRAFT_1_16_5("1.16.5", 754),
     MINECRAFT_1_17("1.17", 755),
     UNKNOWN("UNKNOWN", 340);
 
