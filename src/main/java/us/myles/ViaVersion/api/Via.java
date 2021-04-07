@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 public class Via {
 
     public static ViaAPI<Player> getAPI() {
-        return Main.fakeAPI;
+        return Main.api;
     }
 
 }

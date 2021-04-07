@@ -1,7 +1,5 @@
 package us.myles.ViaVersion.api;
 
-import io.netty.buffer.ByteBuf;
-
 import java.util.SortedSet;
 import java.util.UUID;
 
@@ -20,10 +18,8 @@ public interface ViaAPI<T> {
 
     String getVersion();
 
-    void sendRawPacket(T player, ByteBuf packet);
-
-    void sendRawPacket(UUID uuid, ByteBuf packet);
-
     SortedSet<Integer> getSupportedVersions();
+
+    SortedSet<Integer> getFullSupportedVersions();
 
 }
