@@ -1,41 +1,33 @@
-package us.myles.ViaVersion.api.bukkit;
+package com.viaversion.viaversion.api;
 
-import moe.caramel.protocolversionapi.Main;
-import moe.caramel.protocolversionapi.Protocol;
+import moe.caramel.protocolapi.Protocol;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import us.myles.ViaVersion.api.ViaAPI;
 
 import java.util.SortedSet;
 import java.util.UUID;
 
-public class API implements ViaAPI<Player> {
+public final class BukkitAPI implements ViaAPI<Player> {
 
-    private final Main plugin;
+    private final int serverProtocol;
 
-    public API(Main plugin) {
-        this.plugin = plugin;
+    protected BukkitAPI() {
+        this.serverProtocol = Bukkit.getUnsafe().getProtocolVersion();
     }
 
     @Override
     public int getPlayerVersion(Player player) {
-        return (player != null && player.isOnline()) ?
-                filter(player.getProtocolVersion()) : Main.serverVersion;
+        return (player != null && player.isOnline()) ? this.filter(player.getProtocolVersion()) : this.serverProtocol; // It should return -1 in the future.
     }
 
     @Override
     public int getPlayerVersion(UUID uuid) {
-        return getPlayerVersion(Bukkit.getPlayer(uuid));
-    }
-
-    @Override
-    public String getVersion() {
-        return plugin.getDescription().getVersion();
+        return this.getPlayerVersion(Bukkit.getPlayer(uuid));
     }
 
     @Override
     public boolean isInjected(UUID uuid) {
-        return getPlayerVersion(uuid) != Main.serverVersion;
+        return getPlayerVersion(uuid) != this.serverProtocol;
     }
 
     @Override
@@ -52,7 +44,6 @@ public class API implements ViaAPI<Player> {
         return false;
     }
 
-
     /**
      * Snapshot client cannot be used with most AntiCheat plugins.
      *
@@ -61,5 +52,4 @@ public class API implements ViaAPI<Player> {
     private int filter(int protocol) {
         return Math.min(protocol, Protocol.STABLE.number);
     }
-
 }

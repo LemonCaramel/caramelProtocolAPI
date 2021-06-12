@@ -3,6 +3,7 @@ package us.myles.ViaVersion.api;
 import java.util.SortedSet;
 import java.util.UUID;
 
+@Deprecated
 public interface ViaAPI<T> {
 
     int getPlayerVersion(T player);
@@ -21,5 +22,4 @@ public interface ViaAPI<T> {
     SortedSet<Integer> getSupportedVersions();
 
     SortedSet<Integer> getFullSupportedVersions();
-
 }

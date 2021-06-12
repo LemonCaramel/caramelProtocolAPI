@@ -1,8 +1,9 @@
 name: ViaVersion
 version: ${project_version}
 description: ${project_description}
-main: moe.caramel.protocolversionapi.Main
+main: moe.caramel.protocolapi.Main
 authors: [ LemonCaramel ]
 loadbefore: [ ProtocolLib, ProxyPipe, SpigotLib, SkinRestorer ]
 softdepend: [ ProtocolSupport, PacketListenerApi ]
 website: https://caramel.moe
+api-version: 1.15
