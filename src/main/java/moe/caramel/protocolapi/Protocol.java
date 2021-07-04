@@ -12,11 +12,12 @@ public enum Protocol {
     MINECRAFT_1_16_3(753, "1.16.3"),
     MINECRAFT_1_16_4(754, "1.16.4/5"),
     MINECRAFT_1_17(755, "1.17"),
+    MINECRAFT_1_17_1(756, "1.17.1"),
     MINECRAFT_UNKNOWN(-1, "UNKNOWN");
 
     public final int number;
     public final String version;
-    public static final Protocol STABLE = MINECRAFT_1_16_3;
+    public static final Protocol STABLE = MINECRAFT_1_17;
 
     Protocol(int number, String version) {
         this.number = number;
