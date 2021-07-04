@@ -17,7 +17,7 @@ public final class BukkitAPI implements ViaAPI<Player> {
 
     @Override
     public int getPlayerVersion(Player player) {
-        return (player != null && player.isOnline()) ? this.filter(player.getProtocolVersion()) : this.serverProtocol; // It should return -1 in the future.
+        return (player != null && player.isOnline()) ? this.filter(player.getProtocolVersion()) : -1;
     }
 
     @Override
