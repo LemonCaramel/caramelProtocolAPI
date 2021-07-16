@@ -17,7 +17,7 @@ public enum Protocol {
 
     public final int number;
     public final String version;
-    public static final Protocol STABLE = MINECRAFT_1_17;
+    public static final Protocol STABLE = MINECRAFT_1_17_1;
 
     Protocol(int number, String version) {
         this.number = number;
