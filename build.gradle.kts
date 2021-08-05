@@ -33,5 +33,5 @@ repositories {
 
 dependencies {
     /* Paper API */
-    implementation("com.destroystokyo.paper", "paper-api", property("bukkitAPIVersion") as String)
+    compileOnly("com.destroystokyo.paper", "paper-api", property("bukkitAPIVersion") as String)
 }
