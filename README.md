@@ -18,6 +18,13 @@ Introduction
  - **Warning!** This plugin ensures normal operation only on servers with Daydream(Server Software).
  - This plugin is a Fake API plugin that solves the compatibility problem *(ex. AntiCheat)* between versions.
 
+Structure
+--------
+ - **1.** The player joins the Minecraft server through proxy(Bungeecord, Velocity).
+ - **2.** The proxy server sends the player's protocol version to the Minecraft server.
+ - **3.** Daydream(Server Software) changes the protocol field of the NMS player connection class.
+ - **4.** This plugin returns the correct protocol version on behalf of ViaVersion.
+
 Sources
 --------
  - **[ViaVersion](https://github.com/ViaVersion/ViaVersion)** (The original plugin of this API)

@@ -18,6 +18,13 @@
  - **주의!** 이 플러그인은 Daydream(Server Software)가 사용되는 서버에서만 정상적인 작동을 보장합니다.
  - 이 플러그인은 버전 간의 호환성 문제 *(ex. 안티 치트)* 를 해결하는 Fake API 플러그인입니다.
 
+구조
+--------
+ - **1.** 플레이어가 프록시(Bungeecord, Velocity)를 통해 마인크래프트 서버에 접속합니다.
+ - **2.** 프록시 서버는 플레이어의 프로토콜 버전을 마인크래프트 서버로 보냅니다.
+ - **3.** 정보를 전달 받은 Daydream(서버 소프트웨어)은 NMS player connection 클래스의 프로토콜 버전 필드를 변경합니다.
+ - **4.** 이제 이 플러그인은 ViaVersion을 대신해 올바른 프로토콜 버전을 반환합니다.
+
 출처
 --------
  - **[ViaVersion](https://github.com/ViaVersion/ViaVersion)** (이 API 플러그인의 원본 플러그인 입니다)
