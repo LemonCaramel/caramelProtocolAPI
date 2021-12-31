@@ -1,1 +1,1 @@
-rootProject.name = "caramelProtcolAPI"
+rootProject.name = "caramelProtocolAPI"
